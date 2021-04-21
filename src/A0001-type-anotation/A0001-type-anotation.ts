@@ -18,6 +18,8 @@ let pessoa: {nome: string, idade: number, adulto?: boolean} = {
 
 
 //Funções
+
+
 function soma(x: number, y: number): number{
   return x + y;
 }
