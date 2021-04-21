@@ -13,10 +13,9 @@ enum Cores{
 console.log(Cores.VERMELHO)
 console.log(Cores[10]);
 
-  function escolhaCor(cor: Cores): void {
+export  function escolhaCor(cor: Cores): void {
     console.log(Cores[cor]);
   }
 
   escolhaCor(Cores.ROXO)
 
-  
