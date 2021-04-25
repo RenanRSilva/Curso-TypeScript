@@ -9,6 +9,9 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
+        options: {
+          configFile: 'tsconfig.frontend.json'
+        }
       },
     ],
   },
