@@ -1,5 +1,7 @@
+//associação = um objeto usa outro objeto
 export class Escritor{
   private _ferramenta: Ferramenta | null = null;
+
 
   constructor(private _nome: string) {}
 
