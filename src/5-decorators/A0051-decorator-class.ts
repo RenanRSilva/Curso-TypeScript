@@ -1,9 +1,8 @@
-@decorator //uma função que recebe o target que é a classe que estamos decorando
-export class Animal {
-  constructor(public name: string,  public cor: string) {}
-}
+//uma função que recebe o target que é a classe que estamos decorando
 
-function decorator<T extends new (...args: any[]) => any>(target: T): T{ //Com o decorator posso intervir no meio da classe
+
+function inverteNomeCor<T extends new (...args: any[]) => any>(target: T): T{ //Com o decorator posso intervir no meio da classe,
+                                                                          //é uma função que é chamada no meio da classe
   return class extends target {
     cor: string;
     nome: string;
@@ -19,6 +18,11 @@ function decorator<T extends new (...args: any[]) => any>(target: T): T{ //Com o
       return valor.split('').reverse().join('')
     }
   };
+}
+
+@inverteNomeCor
+export class Animal {
+  constructor(public name: string,  public cor: string) {}
 }
 
 
